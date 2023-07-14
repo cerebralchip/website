@@ -1,6 +1,9 @@
 // This is the eleventy configuration file
 
 module.exports = (config) => {
+  // Set directories to pass through to the dist folder
+  config.addPassthroughCopy("./src/images/");
+
   return {
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
@@ -12,6 +15,6 @@ module.exports = (config) => {
   };
 };
 
-// We've exported a function (opens new window)which returns some settings.
+// We've exported a function which returns some settings.
 // These settings tell Eleventy to look in the src folder for all of our content,
 // templates and other source code, and tell it to use dist as the output fold
